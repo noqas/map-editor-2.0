@@ -1,7 +1,7 @@
-package org.academiadecodigo.bootcamp;
+package org.academiadecodigo.bootcamp.cells;
 
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
-import static org.academiadecodigo.bootcamp.Grid.padding;
+import static org.academiadecodigo.bootcamp.cells.Grid.padding;
 
 
 public class Cell {
@@ -9,7 +9,7 @@ public class Cell {
     //properties
     private int col;
     private int row;
-    private Rectangle rectangle;
+    public Rectangle rectangle;
     public static final int cellSize = 25;
     private boolean painted;
 

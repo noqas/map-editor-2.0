@@ -24,7 +24,17 @@ public class Grid {
         }
     }
 
+    // methods
+    public void clearGrid() {
 
+        for (int row = 0; row < rows; row++) {
+            for (int col = 0; col < cols; col++) {
 
+                if (cells[rows][cols].isPainted()) {
 
+                    cells[rows][cols].erase();
+                }
+            }
+        }
+    }
 }

@@ -7,7 +7,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Grid grid = new Grid(20, 20);
-        Cursor cursor = new Cursor(0,0, grid);
+        User user = new User();
+        KeyboardManager keyboardManager = new KeyboardManager(user);
     }
 }

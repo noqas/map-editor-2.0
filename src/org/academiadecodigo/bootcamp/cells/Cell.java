@@ -9,9 +9,10 @@ public class Cell {
     //properties
     private int col;
     private int row;
-    public Rectangle rectangle;
-    public static final int cellSize = 25;
+    protected Rectangle rectangle;
+    protected static final int cellSize = 15;
     private boolean painted;
+
 
 
     // constructor
@@ -30,8 +31,34 @@ public class Cell {
         painted = true;
     }
 
+
     public void erase() {
         rectangle.draw();
         painted = false;
+    }
+
+
+    public boolean isPainted() {
+        return painted;
+    }
+
+
+    public int getRow() {
+        return row;
+    }
+
+
+    public int getCol() {
+        return col;
+    }
+
+
+    public void setCol(int newCol) {
+        col = newCol;
+    }
+
+
+    public void setRow(int newRow) {
+        row = newRow;
     }
 }

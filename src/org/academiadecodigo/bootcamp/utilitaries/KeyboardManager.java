@@ -126,5 +126,9 @@ public class KeyboardManager implements KeyboardHandler {
 
     @Override
     public void keyReleased(KeyboardEvent keyboardEvent) {
+
+        if(keyboardEvent.getKey() == KeyboardEvent.KEY_SPACE) {
+            cursor.setPainting(false);
+        }
     }
 }

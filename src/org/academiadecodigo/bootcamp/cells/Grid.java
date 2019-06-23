@@ -53,6 +53,7 @@ public class Grid {
         }
     }
 
+
     //grid to string
     @Override
     public String toString() {

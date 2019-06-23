@@ -22,14 +22,14 @@ public class User {
     }
 
 
+    //methods
     public void paintCell() {
+        Cell currentCell = grid.getCell(cursor.getRow(), cursor.getCol());
 
-        Cell cell = grid.getCell(cursor.getRow(), cursor.getCol());
-
-        if(!cell.isPainted()) {
-            cell.fill();
+        if(!currentCell.isPainted()) {
+            currentCell.fill();
         } else {
-            cell.erase();
+            currentCell.erase();
         }
     }
 
@@ -37,6 +37,7 @@ public class User {
     public void clearGrid() {
         grid.clear();
     }
+
 
     public void save() {
         FileManager.writeFile(grid.toString());

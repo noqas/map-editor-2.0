@@ -6,6 +6,7 @@ public class Cursor extends Cell {
 
     //properties
     private Grid grid;
+    private boolean painting;
 
     //constructor
     public Cursor(Grid grid) {
@@ -17,6 +18,11 @@ public class Cursor extends Cell {
 
 
     //methods
+    public void setPainting(boolean painting) {
+        this.painting = painting;
+    }
+
+
     public void moveUp() {
         if(getRow() > 0) {
             rectangle.translate(0, -cellSize); // graphic

@@ -1,5 +1,7 @@
 package org.academiadecodigo.bootcamp;
 
+import org.academiadecodigo.bootcamp.cells.Cursor;
+import org.academiadecodigo.bootcamp.cells.Grid;
 import org.academiadecodigo.simplegraphics.keyboard.Keyboard;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardEvent;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardEventType;
@@ -9,11 +11,14 @@ public class KeyboardManager implements KeyboardHandler {
 
     //properties
     private User user;
+    private Cursor cursor;
+    private Grid grid;
 
 
     //constructor
-    public KeyboardManager(User user) {
+    public KeyboardManager(User user, Cursor cursor) {
         this.user = user;
+        this.cursor = cursor;
         setKeyboard();
     }
 
@@ -26,25 +31,30 @@ public class KeyboardManager implements KeyboardHandler {
 
         switch (key) {
             case KeyboardEvent.KEY_LEFT:  //move left
-
+                cursor.moveLeft();
                 break;
 
             case KeyboardEvent.KEY_RIGHT:  //move right
+                cursor.moveRight();
                 break;
 
             case KeyboardEvent.KEY_UP:  //move up
+                cursor.moveUp();
                 break;
 
             case KeyboardEvent.KEY_DOWN:  //move down
+                cursor.moveDown();
                 break;
 
             case KeyboardEvent.KEY_SPACE:  //paints the cell black
+                cursor.fill();
                 break;
 
             case KeyboardEvent.KEY_R:   //paints the cell in a random color
                 break;
 
             case KeyboardEvent.KEY_C:  //clears all the grid
+                grid.clearGrid();
                 break;
 
             case KeyboardEvent.KEY_S:  //save grid
@@ -60,36 +70,53 @@ public class KeyboardManager implements KeyboardHandler {
 
 
     public void setKeyboard() {
+
         Keyboard keyboard = new Keyboard(this);
-        KeyboardEvent[] keyboardEvents = new KeyboardEvent[8];
 
-        for (int i = 0; i < keyboardEvents.length; i++) {
-            keyboardEvents[i] = new KeyboardEvent();
-        }
+        KeyboardEvent eventLeft = new KeyboardEvent();
+        eventLeft.setKey(KeyboardEvent.KEY_LEFT);
+        eventLeft.setKeyboardEventType(KeyboardEventType.KEY_PRESSED);
+        keyboard.addEventListener(eventLeft);
 
-        keyboardEvents[0].setKey(KeyboardEvent.KEY_UP);
-        keyboardEvents[0].setKeyboardEventType(KeyboardEventType.KEY_PRESSED);
+        KeyboardEvent eventRight = new KeyboardEvent();
+        eventRight.setKey(KeyboardEvent.KEY_RIGHT);
+        eventRight.setKeyboardEventType(KeyboardEventType.KEY_PRESSED);
+        keyboard.addEventListener(eventRight);
 
-        keyboardEvents[1].setKey(KeyboardEvent.KEY_DOWN);
-        keyboardEvents[1].setKeyboardEventType(KeyboardEventType.KEY_PRESSED);
+        KeyboardEvent eventUp = new KeyboardEvent();
+        eventUp.setKey(KeyboardEvent.KEY_UP);
+        eventUp.setKeyboardEventType(KeyboardEventType.KEY_PRESSED);
+        keyboard.addEventListener(eventUp);
 
-        keyboardEvents[2].setKey(KeyboardEvent.KEY_RIGHT);
-        keyboardEvents[2].setKeyboardEventType(KeyboardEventType.KEY_PRESSED);
+        KeyboardEvent eventDown = new KeyboardEvent();
+        eventDown.setKey(KeyboardEvent.KEY_DOWN);
+        eventDown.setKeyboardEventType(KeyboardEventType.KEY_PRESSED);
+        keyboard.addEventListener(eventDown);
 
-        keyboardEvents[3].setKey(KeyboardEvent.KEY_LEFT);
-        keyboardEvents[3].setKeyboardEventType(KeyboardEventType.KEY_PRESSED);
+        KeyboardEvent eventSpace = new KeyboardEvent();
+        eventSpace.setKey(KeyboardEvent.KEY_SPACE);
+        eventSpace.setKeyboardEventType(KeyboardEventType.KEY_PRESSED);
+        keyboard.addEventListener(eventSpace);
 
-        keyboardEvents[4].setKey(KeyboardEvent.KEY_SPACE);
-        keyboardEvents[4].setKeyboardEventType(KeyboardEventType.KEY_PRESSED);
+        KeyboardEvent eventC = new KeyboardEvent();
+        eventC.setKey(KeyboardEvent.KEY_C);
+        eventC.setKeyboardEventType(KeyboardEventType.KEY_PRESSED);
+        keyboard.addEventListener(eventC);
 
-        keyboardEvents[5].setKey(KeyboardEvent.KEY_R);
-        keyboardEvents[5].setKeyboardEventType(KeyboardEventType.KEY_PRESSED);
+        KeyboardEvent eventS = new KeyboardEvent();
+        eventS.setKey(KeyboardEvent.KEY_S);
+        eventS.setKeyboardEventType(KeyboardEventType.KEY_PRESSED);
+        keyboard.addEventListener(eventS);
 
-        keyboardEvents[6].setKey(KeyboardEvent.KEY_L);
-        keyboardEvents[6].setKeyboardEventType(KeyboardEventType.KEY_PRESSED);
+        KeyboardEvent eventL = new KeyboardEvent();
+        eventL.setKey(KeyboardEvent.KEY_L);
+        eventL.setKeyboardEventType(KeyboardEventType.KEY_PRESSED);
+        keyboard.addEventListener(eventL);
 
-        keyboardEvents[7].setKey(KeyboardEvent.KEY_S);
-        keyboardEvents[7].setKeyboardEventType(KeyboardEventType.KEY_PRESSED);
+        KeyboardEvent eventR = new KeyboardEvent();
+        eventR.setKey(KeyboardEvent.KEY_R);
+        eventR.setKeyboardEventType(KeyboardEventType.KEY_PRESSED);
+        keyboard.addEventListener(eventR);
     }
 
 

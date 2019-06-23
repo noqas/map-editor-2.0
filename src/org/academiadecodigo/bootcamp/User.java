@@ -8,11 +8,13 @@ public class User {
     //properties
     private Grid grid;
     private Cursor cursor;
+    private KeyboardManager keyboardManager;
 
 
     //constructor
     public User() {
         grid = new Grid(50, 50);
-        cursor = new Cursor();
+        cursor = new Cursor(grid);
+        keyboardManager = new KeyboardManager(this, cursor);
     }
 }

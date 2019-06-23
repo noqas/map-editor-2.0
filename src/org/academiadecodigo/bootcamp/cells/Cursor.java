@@ -10,10 +10,9 @@ public class Cursor extends Cell {
 
 
     //constructor
-    public Cursor() {
+    public Cursor(Grid grid) {
         super(0, 0);
-        // this.grid = grid;
-
+        this.grid = grid;
         rectangle.setColor(Color.ORANGE);
         fill();
     }
@@ -31,25 +30,37 @@ public class Cursor extends Cell {
 
 
     public void moveUp() {
-        setRow(getRow() - 1); // logic
-        rectangle.translate(0, cellSize); // graphic
+
+        if(getRow() > 0) {
+            rectangle.translate(0, -cellSize); // graphic
+            setRow(getRow() - 1); // logic
+        }
     }
 
 
     public void moveDown() {
-        setRow(getRow() + 1);
-        rectangle.translate(0, -cellSize);
+
+        if (getRow() < grid.getRows() - 1) {
+            rectangle.translate(0, cellSize);
+            setRow(getRow() + 1);
+        }
     }
 
 
     public void moveRight() {
-        setCol(getCol() + 1);
-        rectangle.translate(cellSize, 0);
+
+        if (getCol() < grid.getCols() - 1) {
+            rectangle.translate(cellSize, 0);
+            setCol(getCol() + 1);
+        }
     }
 
 
     public void moveLeft() {
-        setCol(getCol() - 1);
-        rectangle.translate(-cellSize, 0);
+
+        if (getCol() > 0) {
+            rectangle.translate(-cellSize, 0);
+            setCol(getCol() - 1);
+        }
     }
 }

@@ -16,9 +16,10 @@ public class KeyboardManager implements KeyboardHandler {
 
 
     //constructor
-    public KeyboardManager(User user, Cursor cursor) {
+    public KeyboardManager(User user, Cursor cursor, Grid grid) {
         this.user = user;
         this.cursor = cursor;
+        this.grid = grid;
         setKeyboard();
     }
 
@@ -47,14 +48,14 @@ public class KeyboardManager implements KeyboardHandler {
                 break;
 
             case KeyboardEvent.KEY_SPACE:  //paints the cell black
-                cursor.fill();
-                break;
-
-            case KeyboardEvent.KEY_R:   //paints the cell in a random color
+                user.paintCell();
                 break;
 
             case KeyboardEvent.KEY_C:  //clears all the grid
                 grid.clearGrid();
+                break;
+
+            case KeyboardEvent.KEY_R:   //paints the cell in a random color
                 break;
 
             case KeyboardEvent.KEY_S:  //save grid

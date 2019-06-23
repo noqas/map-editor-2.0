@@ -1,5 +1,6 @@
 package org.academiadecodigo.bootcamp.cells;
 
+import org.academiadecodigo.simplegraphics.graphics.Color;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 import static org.academiadecodigo.bootcamp.cells.Grid.padding;
 
@@ -27,6 +28,7 @@ public class Cell {
 
     //methods
     public void fill() {
+        rectangle.setColor(Color.BLACK);
         rectangle.fill();
         painted = true;
     }
@@ -38,7 +40,7 @@ public class Cell {
     }
 
 
-    public boolean isPainted() {
+    public boolean isPainted() { //getter for booleans
         return painted;
     }
 

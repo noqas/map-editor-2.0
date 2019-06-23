@@ -19,14 +19,14 @@ public class Cursor extends Cell {
 
 
     //methods
-    public void paintCell(int col, int row) {
+    /* public void paint(int col, int row) {
 
-        if(!cells[row][col].isPainted()) {
-            cells[row][col].fill();
+        if(!isPainted()) {
+            fill();
         } else {
-            cells[row][col].erase();
+            erase();
         }
-    }
+    } */
 
 
     public void moveUp() {

@@ -5,6 +5,8 @@ public class Grid {
     //properties
     private int rows;
     private int cols;
+
+
     private Cell[][] cells;
     public static final int padding = 10;
 
@@ -26,14 +28,19 @@ public class Grid {
 
 
     // methods
+    public Cell getCell(int row, int col) {
+        return cells[row][col];
+    }
+
+
     public void clearGrid() {
 
         for (int row = 0; row < rows; row++) {
             for (int col = 0; col < cols; col++) {
 
-                if (cells[rows][cols].isPainted()) {
+                if (cells[row][col].isPainted()) {
 
-                    cells[rows][cols].erase();
+                    cells[row][col].erase();
                 }
             }
         }

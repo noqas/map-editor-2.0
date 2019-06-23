@@ -5,8 +5,6 @@ public class Grid {
     //properties
     private int rows;
     private int cols;
-
-
     private Cell[][] cells;
     public static final int padding = 10;
 
@@ -33,7 +31,16 @@ public class Grid {
     }
 
 
-    public void clearGrid() {
+    public int getRows() {
+        return rows;
+    }
+
+    public int getCols() {
+        return cols;
+    }
+
+
+    public void clear() {
 
         for (int row = 0; row < rows; row++) {
             for (int col = 0; col < cols; col++) {
@@ -46,12 +53,41 @@ public class Grid {
         }
     }
 
+    //grid to string
+    @Override
+    public String toString() {
+        StringBuilder stringBuilder = new StringBuilder();
 
-    public int getRows() {
-        return rows;
+        for (int row = 0; row < rows; row++) {
+            for (int col = 0; col < cols; col++) {
+
+                stringBuilder.append(cells[row][col]);
+            }
+            stringBuilder.append("\n");
+        }
+        return stringBuilder.toString();
     }
 
-    public int getCols() {
-        return cols;
+
+    //string to grid
+    public void stringToGrid(String stringOfNumbers) {
+
+        int index = 0;
+
+        for (int row = 0; row < rows; row++) {
+            for (int col = 0; col < cols; col++) {
+
+                if(stringOfNumbers.charAt(index) == '0') {
+                    cells[row][col].erase();
+                } else {
+                    cells[row][col].fill();
+                }
+                index++;
+            }
+        index++;
+        }
     }
+
 }
+
+

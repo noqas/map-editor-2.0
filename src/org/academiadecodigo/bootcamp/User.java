@@ -3,6 +3,8 @@ package org.academiadecodigo.bootcamp;
 import org.academiadecodigo.bootcamp.cells.Cell;
 import org.academiadecodigo.bootcamp.cells.Cursor;
 import org.academiadecodigo.bootcamp.cells.Grid;
+import org.academiadecodigo.bootcamp.utilitaries.FileManager;
+import org.academiadecodigo.bootcamp.utilitaries.KeyboardManager;
 
 public class User {
 
@@ -29,5 +31,19 @@ public class User {
         } else {
             cell.erase();
         }
+    }
+
+
+    public void clearGrid() {
+        grid.clear();
+    }
+
+    public void save() {
+        FileManager.writeFile(grid.toString());
+    }
+
+
+    public void load() {
+        grid.stringToGrid(FileManager.readFile());
     }
 }

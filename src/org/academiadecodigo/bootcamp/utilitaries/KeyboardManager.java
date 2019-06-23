@@ -1,5 +1,6 @@
-package org.academiadecodigo.bootcamp;
+package org.academiadecodigo.bootcamp.utilitaries;
 
+import org.academiadecodigo.bootcamp.User;
 import org.academiadecodigo.bootcamp.cells.Cursor;
 import org.academiadecodigo.bootcamp.cells.Grid;
 import org.academiadecodigo.simplegraphics.keyboard.Keyboard;
@@ -52,16 +53,18 @@ public class KeyboardManager implements KeyboardHandler {
                 break;
 
             case KeyboardEvent.KEY_C:  //clears all the grid
-                grid.clearGrid();
+                user.clearGrid();
                 break;
 
             case KeyboardEvent.KEY_R:   //paints the cell in a random color
                 break;
 
             case KeyboardEvent.KEY_S:  //save grid
+                user.save();
                 break;
 
             case KeyboardEvent.KEY_L:  //load grid
+                user.load();
                 break;
 
             default:

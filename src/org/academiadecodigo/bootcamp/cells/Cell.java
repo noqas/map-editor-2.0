@@ -28,7 +28,6 @@ public class Cell {
 
     //methods
     public void fill() {
-        rectangle.setColor(Color.BLACK);
         rectangle.fill();
         painted = true;
     }
@@ -62,5 +61,16 @@ public class Cell {
 
     public void setRow(int newRow) {
         row = newRow;
+    }
+
+
+    @Override
+    public String toString() {
+
+        if(painted) {
+            return "1";
+        } else {
+            return "0";
+        }
     }
 }

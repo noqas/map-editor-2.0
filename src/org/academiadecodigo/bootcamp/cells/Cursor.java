@@ -6,8 +6,6 @@ public class Cursor extends Cell {
 
     //properties
     private Grid grid;
-    private Cell[][] cells;
-
 
     //constructor
     public Cursor(Grid grid) {
@@ -19,18 +17,7 @@ public class Cursor extends Cell {
 
 
     //methods
-    /* public void paint(int col, int row) {
-
-        if(!isPainted()) {
-            fill();
-        } else {
-            erase();
-        }
-    } */
-
-
     public void moveUp() {
-
         if(getRow() > 0) {
             rectangle.translate(0, -cellSize); // graphic
             setRow(getRow() - 1); // logic
@@ -39,7 +26,6 @@ public class Cursor extends Cell {
 
 
     public void moveDown() {
-
         if (getRow() < grid.getRows() - 1) {
             rectangle.translate(0, cellSize);
             setRow(getRow() + 1);
@@ -48,7 +34,6 @@ public class Cursor extends Cell {
 
 
     public void moveRight() {
-
         if (getCol() < grid.getCols() - 1) {
             rectangle.translate(cellSize, 0);
             setCol(getCol() + 1);
@@ -57,7 +42,6 @@ public class Cursor extends Cell {
 
 
     public void moveLeft() {
-
         if (getCol() > 0) {
             rectangle.translate(-cellSize, 0);
             setCol(getCol() - 1);

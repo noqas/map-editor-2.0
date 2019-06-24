@@ -33,22 +33,23 @@ public class KeyboardManager implements KeyboardHandler {
 
         switch (key) {
             case KeyboardEvent.KEY_LEFT:  //move left
-                cursor.moveLeft();
+                user.moveCursor(Cursor.Directions.LEFT);
                 break;
 
             case KeyboardEvent.KEY_RIGHT:  //move right
-                cursor.moveRight();
+                user.moveCursor(Cursor.Directions.RIGHT);
                 break;
 
             case KeyboardEvent.KEY_UP:  //move up
-                cursor.moveUp();
+                user.moveCursor(Cursor.Directions.UP);
                 break;
 
             case KeyboardEvent.KEY_DOWN:  //move down
-                cursor.moveDown();
+                user.moveCursor(Cursor.Directions.DOWN);
                 break;
 
             case KeyboardEvent.KEY_SPACE:  //paints the cell black
+                user.setPainting(true);
                 user.paintCell();
                 break;
 
@@ -128,7 +129,7 @@ public class KeyboardManager implements KeyboardHandler {
     public void keyReleased(KeyboardEvent keyboardEvent) {
 
         if(keyboardEvent.getKey() == KeyboardEvent.KEY_SPACE) {
-            cursor.setPainting(false);
+            user.setPainting(false);
         }
     }
 }

@@ -6,23 +6,30 @@ public class Cursor extends Cell {
 
     //properties
     private Grid grid;
-    private boolean painting;
+    private Color color;
+
 
     //constructor
     public Cursor(Grid grid) {
         super(0, 0);
         this.grid = grid;
-        rectangle.setColor(Color.ORANGE);
+        color = Color.ORANGE;
+        rectangle.setColor(color);
         fill();
     }
 
 
     //methods
-    public void setPainting(boolean painting) {
-        this.painting = painting;
+    public enum Directions { // cursor has directions
+
+        UP,
+        DOWN,
+        RIGHT,
+        LEFT,
+
     }
 
-
+    
     public void moveUp() {
         if(getRow() > 0) {
             rectangle.translate(0, -cellSize); // graphic

@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee1d9e21-c1a2-4356-846a-d36ba5641f04" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Colors.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MapEditor2.0/org/academiadecodigo/bootcamp/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MapEditor2.0/org/academiadecodigo/bootcamp/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/binaryGrid.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/binaryGrid.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/cells/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/cells/Cell.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/cells/Cursor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/cells/Cursor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/cells/Grid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/cells/Grid.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/utilitaries/KeyboardManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/utilitaries/KeyboardManager.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -22,14 +23,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/cells/Cell.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="28" column="24" lean-forward="true" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+            <state relative-caret-position="30">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#Cell#0;class#Cell#0" />
-                <element signature="e#932#961#1" />
+                <element signature="e#1057#1058#0" expanded="true" />
                 <element signature="e#1085#1086#0" expanded="true" />
-                <element signature="e#527#556#1" />
+                <element signature="e#1124#1125#0" expanded="true" />
                 <element signature="e#1152#1153#0" expanded="true" />
               </folding>
             </state>
@@ -39,13 +40,16 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/cells/Grid.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="55" selection-start-line="55" selection-end-line="55" />
+            <state relative-caret-position="240">
+              <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
               <folding>
                 <element signature="method#Grid#0;class#Grid#0" />
+                <element signature="e#590#591#0" expanded="true" />
+                <element signature="e#628#629#0" expanded="true" />
+                <element signature="e#657#658#0" expanded="true" />
                 <element signature="e#684#685#0" expanded="true" />
+                <element signature="e#712#713#0" expanded="true" />
                 <element signature="e#739#740#0" expanded="true" />
-                <element signature="method#clearGrid#0;class#Grid#0" />
                 <element signature="method#toString#0;class#Grid#0" />
                 <element signature="method#stringToGrid#0;class#Grid#0" />
               </folding>
@@ -56,11 +60,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/cells/Cursor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="33" column="28" lean-forward="true" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
+            <state relative-caret-position="390">
+              <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
               <folding>
-                <element signature="e#439#440#0" expanded="true" />
-                <element signature="e#479#480#0" expanded="true" />
+                <element signature="method#moveUp#0;class#Cursor#0" />
+                <element signature="method#moveDown#0;class#Cursor#0" />
+                <element signature="method#moveRight#0;class#Cursor#0" />
+                <element signature="method#moveLeft#0;class#Cursor#0" />
               </folding>
             </state>
           </provider>
@@ -69,15 +75,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="463">
-              <caret line="40" selection-start-line="40" selection-end-line="40" />
+            <state relative-caret-position="547">
+              <caret line="52" column="30" lean-forward="true" selection-start-line="52" selection-start-column="30" selection-end-line="52" selection-end-column="30" />
               <folding>
-                <element signature="e#940#941#0" expanded="true" />
-                <element signature="e#968#969#0" expanded="true" />
-                <element signature="e#1082#1083#0" expanded="true" />
-                <element signature="e#1136#1137#0" expanded="true" />
-                <element signature="e#1075#1076#0" expanded="true" />
-                <element signature="e#1132#1133#0" expanded="true" />
+                <element signature="e#831#832#0" expanded="true" />
+                <element signature="method#paintColor#0;class#User#0" />
+                <element signature="e#2814#2815#0" expanded="true" />
+                <element signature="e#2895#2896#0" expanded="true" />
+                <element signature="e#2979#2980#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -86,12 +91,21 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/utilitaries/KeyboardManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="35" selection-start-line="35" selection-end-line="35" />
+            <state relative-caret-position="280">
+              <caret line="51" column="39" lean-forward="true" selection-start-line="51" selection-start-column="39" selection-end-line="51" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#setKeyboard#0;class#KeyboardManager#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -102,6 +116,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -115,22 +130,25 @@
         <option value="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Grid.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Cursor.java" />
-        <option value="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Main.java" />
         <option value="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/KeyboardManager.java" />
         <option value="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/FileManager.java" />
         <option value="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/utilitaries/FileManager.java" />
-        <option value="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/cells/Cell.java" />
         <option value="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/cells/Grid.java" />
-        <option value="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/utilitaries/KeyboardManager.java" />
-        <option value="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/cells/Cursor.java" />
-        <option value="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/User.java" />
+        <option value="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Main.java" />
         <option value="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/RandomColors.java" />
+        <option value="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/possibleColors.java" />
+        <option value="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Colors.java" />
+        <option value="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/cells/Cell.java" />
+        <option value="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/utilitaries/KeyboardManager.java" />
+        <option value="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/User.java" />
+        <option value="$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/cells/Cursor.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="y" value="23" />
-    <option name="width" value="1920" />
+    <option name="x" value="979" />
+    <option name="y" value="29" />
+    <option name="width" value="927" />
     <option name="height" value="977" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -139,7 +157,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -182,13 +199,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="true" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561310781893" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561380733408" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -235,18 +253,19 @@
       <option name="presentableId" value="Default" />
       <updated>1561213662756</updated>
       <workItem from="1561213666879" duration="8757000" />
-      <workItem from="1561286291274" duration="23747000" />
+      <workItem from="1561286291274" duration="23806000" />
+      <workItem from="1561359754194" duration="7160000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32504000" />
+    <option name="totallyTimeSpent" value="39723000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21299255" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21512248" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -285,13 +304,6 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/simple-graphics-0.2.1-SNAPSHOT.jar!/org/academiadecodigo/simplegraphics/graphics/Rectangle.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="217">
@@ -313,15 +325,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/org.academiadecodigo.bootcamp.User@6301e3f1">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/org.academiadecodigo.bootcamp.User@5030dec1">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/org.academiadecodigo.bootcamp.User@622bf076">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/org.academiadecodigo.bootcamp.User@6301e3f1" />
+    <entry file="file://$PROJECT_DIR$/org.academiadecodigo.bootcamp.User@5030dec1" />
+    <entry file="file://$PROJECT_DIR$/org.academiadecodigo.bootcamp.User@622bf076" />
     <entry file="jar:///Library/Java/JavaVirtualMachines/openjdk-11.0.1.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/StringLatin1.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -329,26 +335,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/org.academiadecodigo.bootcamp.User@45011dfc">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/org.academiadecodigo.bootcamp.User@10ca8784">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/org.academiadecodigo.bootcamp.User@7ff329e7">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/org.academiadecodigo.bootcamp.User@677e58e5">
+    <entry file="file://$PROJECT_DIR$/org.academiadecodigo.bootcamp.User@45011dfc" />
+    <entry file="file://$PROJECT_DIR$/org.academiadecodigo.bootcamp.User@10ca8784" />
+    <entry file="file://$PROJECT_DIR$/org.academiadecodigo.bootcamp.User@7ff329e7" />
+    <entry file="file://$PROJECT_DIR$/org.academiadecodigo.bootcamp.User@677e58e5" />
+    <entry file="file://$PROJECT_DIR$/binaryGrid.txt" />
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/utilitaries/FileManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="42" selection-start-column="42" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/binaryGrid.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+        <state relative-caret-position="102">
+          <caret line="14" column="13" lean-forward="true" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -357,45 +352,55 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/cells/Cell.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="28" column="24" lean-forward="true" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#Cell#0;class#Cell#0" />
-            <element signature="e#932#961#1" />
+            <element signature="e#1057#1058#0" expanded="true" />
             <element signature="e#1085#1086#0" expanded="true" />
-            <element signature="e#527#556#1" />
+            <element signature="e#1124#1125#0" expanded="true" />
             <element signature="e#1152#1153#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/utilitaries/FileManager.java">
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/cells/Grid.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="14" column="13" lean-forward="true" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        <state relative-caret-position="240">
+          <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
+          <folding>
+            <element signature="method#Grid#0;class#Grid#0" />
+            <element signature="e#590#591#0" expanded="true" />
+            <element signature="e#628#629#0" expanded="true" />
+            <element signature="e#657#658#0" expanded="true" />
+            <element signature="e#684#685#0" expanded="true" />
+            <element signature="e#712#713#0" expanded="true" />
+            <element signature="e#739#740#0" expanded="true" />
+            <element signature="method#toString#0;class#Grid#0" />
+            <element signature="method#stringToGrid#0;class#Grid#0" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/User.java">
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Colors.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
-          <folding>
-            <element signature="e#940#941#0" expanded="true" />
-            <element signature="e#968#969#0" expanded="true" />
-            <element signature="e#1082#1083#0" expanded="true" />
-            <element signature="e#1136#1137#0" expanded="true" />
-            <element signature="e#1075#1076#0" expanded="true" />
-            <element signature="e#1132#1133#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="360">
+          <caret line="24" column="79" lean-forward="true" selection-start-line="24" selection-start-column="79" selection-end-line="24" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/utilitaries/KeyboardManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        <state relative-caret-position="280">
+          <caret line="51" column="39" lean-forward="true" selection-start-line="51" selection-start-column="39" selection-end-line="51" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#setKeyboard#0;class#KeyboardManager#0" />
@@ -403,35 +408,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/cells/Grid.java">
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="55" selection-start-line="55" selection-end-line="55" />
+        <state relative-caret-position="547">
+          <caret line="52" column="30" lean-forward="true" selection-start-line="52" selection-start-column="30" selection-end-line="52" selection-end-column="30" />
           <folding>
-            <element signature="method#Grid#0;class#Grid#0" />
-            <element signature="e#684#685#0" expanded="true" />
-            <element signature="e#739#740#0" expanded="true" />
-            <element signature="method#clearGrid#0;class#Grid#0" />
-            <element signature="method#toString#0;class#Grid#0" />
-            <element signature="method#stringToGrid#0;class#Grid#0" />
+            <element signature="e#831#832#0" expanded="true" />
+            <element signature="method#paintColor#0;class#User#0" />
+            <element signature="e#2814#2815#0" expanded="true" />
+            <element signature="e#2895#2896#0" expanded="true" />
+            <element signature="e#2979#2980#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/RandomColors.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="31" lean-forward="true" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/bootcamp/cells/Cursor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="33" column="28" lean-forward="true" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
+        <state relative-caret-position="390">
+          <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
           <folding>
-            <element signature="e#439#440#0" expanded="true" />
-            <element signature="e#479#480#0" expanded="true" />
+            <element signature="method#moveUp#0;class#Cursor#0" />
+            <element signature="method#moveDown#0;class#Cursor#0" />
+            <element signature="method#moveRight#0;class#Cursor#0" />
+            <element signature="method#moveLeft#0;class#Cursor#0" />
           </folding>
         </state>
       </provider>

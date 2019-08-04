@@ -49,8 +49,10 @@ public class KeyboardManager implements KeyboardHandler {
                 break;
 
             case KeyboardEvent.KEY_SPACE:  //paints the cell black
-                user.setPainting(true);
-                user.paintCell();
+                if (!user.isPainting()){
+                    user.setPainting(true);
+                    user.paintCell();
+                } else {user.setPainting(false);}
                 break;
 
             case KeyboardEvent.KEY_C:  //clears all the grid

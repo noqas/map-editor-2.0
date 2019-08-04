@@ -6,7 +6,7 @@ import java.io.*;
 public class FileManager {
 
     //properties
-    private static final String filePath = "/Users/codecadet/Desktop/Workspace/Projects/Week6/MapEditor2.0/resources/binaryGrid.txt";
+    private static final String filePath = "resources/binaryGrid.txt";
 
 
     //methods
@@ -17,6 +17,7 @@ public class FileManager {
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
 
             bufferedWriter.write(file);
+            bufferedWriter.flush();
             bufferedWriter.close();
         }
         catch (IOException e) {

@@ -142,4 +142,8 @@ public class User {
     public void load() {
         grid.stringToGrid(FileManager.readFile());
     }
+
+    public boolean isPainting() {
+        return painting;
+    }
 }

@@ -29,7 +29,7 @@ public class Cursor extends Cell {
 
     }
 
-    
+
     public void moveUp() {
         if(getRow() > 0) {
             rectangle.translate(0, -cellSize); // graphic

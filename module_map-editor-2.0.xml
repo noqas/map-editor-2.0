@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_map-editor-2.0" default="compile.module.map-editor-2.0">
+  <dirname property="module.map-editor-2.0.basedir" file="${ant.file.module_map-editor-2.0}"/>
+  
+  <property name="module.jdk.home.map-editor-2.0" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.map-editor-2.0" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.map-editor-2.0" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.map-editor-2.0" value="-encoding UTF-8 -source 12 -target 12 ${compiler.args}"/>
+  
+  <property name="map-editor-2.0.output.dir" value="${module.map-editor-2.0.basedir}/out/production/map-editor-2.0"/>
+  <property name="map-editor-2.0.testoutput.dir" value="${module.map-editor-2.0.basedir}/out/test/map-editor-2.0"/>
+  
+  <path id="map-editor-2.0.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="map-editor-2.0.module.production.classpath">
+    <path refid="${module.jdk.classpath.map-editor-2.0}"/>
+    <path refid="library.simple-graphics-0.2.1-snapshot.classpath"/>
+  </path>
+  
+  <path id="map-editor-2.0.runtime.production.module.classpath">
+    <pathelement location="${map-editor-2.0.output.dir}"/>
+    <path refid="library.simple-graphics-0.2.1-snapshot.classpath"/>
+  </path>
+  
+  <path id="map-editor-2.0.module.classpath">
+    <path refid="${module.jdk.classpath.map-editor-2.0}"/>
+    <pathelement location="${map-editor-2.0.output.dir}"/>
+    <path refid="library.simple-graphics-0.2.1-snapshot.classpath"/>
+  </path>
+  
+  <path id="map-editor-2.0.runtime.module.classpath">
+    <pathelement location="${map-editor-2.0.testoutput.dir}"/>
+    <pathelement location="${map-editor-2.0.output.dir}"/>
+    <path refid="library.simple-graphics-0.2.1-snapshot.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.map-editor-2.0">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.map-editor-2.0">
+    <patternset refid="excluded.from.module.map-editor-2.0"/>
+  </patternset>
+  
+  <path id="map-editor-2.0.module.sourcepath">
+    <dirset dir="${module.map-editor-2.0.basedir}">
+      <include name="src"/>
+      <include name="resources"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.map-editor-2.0" depends="compile.module.map-editor-2.0.production,compile.module.map-editor-2.0.tests" description="Compile module map-editor-2.0"/>
+  
+  <target name="compile.module.map-editor-2.0.production" depends="register.custom.compilers" description="Compile module map-editor-2.0; production classes">
+    <mkdir dir="${map-editor-2.0.output.dir}"/>
+    <javac2 destdir="${map-editor-2.0.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.map-editor-2.0}/javac">
+      <compilerarg line="${compiler.args.map-editor-2.0}"/>
+      <bootclasspath refid="map-editor-2.0.module.bootclasspath"/>
+      <classpath refid="map-editor-2.0.module.production.classpath"/>
+      <src refid="map-editor-2.0.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.map-editor-2.0"/>
+    </javac2>
+    
+    <copy todir="${map-editor-2.0.output.dir}">
+      <fileset dir="${module.map-editor-2.0.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.map-editor-2.0.basedir}/resources">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.map-editor-2.0.tests" depends="register.custom.compilers,compile.module.map-editor-2.0.production" description="compile module map-editor-2.0; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.map-editor-2.0" description="cleanup module">
+    <delete dir="${map-editor-2.0.output.dir}"/>
+    <delete dir="${map-editor-2.0.testoutput.dir}"/>
+  </target>
+</project>
